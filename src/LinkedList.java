@@ -32,6 +32,7 @@ public class LinkedList
         LinkedList node = getElem(head,position-1);
         LinkedList delNode = getElem(head,position);
         node.next = delNode.next;
+        delNode = null;
     }
     public static LinkedList getElem(LinkedList head,int position)
     {
@@ -56,5 +57,16 @@ public class LinkedList
             node = node.next;
         }
             return head;
+    }
+    public static void destroyList (LinkedList head)
+    {
+        LinkedList node =head.getNext();
+        while(node!=null)
+        {
+            LinkedList nextNode = node.next;
+            node.next = null;
+            node = nextNode;
+        }
+        head.next = null; //***
     }
 }

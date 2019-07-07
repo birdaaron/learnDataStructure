@@ -3,17 +3,13 @@ public class test
 
     public static void main(String args[])
     {
-        LinkedList head = LinkedList.makeList(3);
-        LinkedList node = head.getNext();
-        LinkedList insertNode = new LinkedList();
-        insertNode.setData(100);
-        LinkedList.insertElem(head,2,insertNode);
-        LinkedList.deleteElem(head,3);
-        for(int i=0;i<4;i++)
-        {
-            System.out.println(node.getData());
-            node = node.getNext();
-        }
+        StaticLinkedList[] a = new StaticLinkedList[StaticLinkedList.MAXSIZE];
+        StaticLinkedList.makeList(a);
+        for(int i = 1;i<3;i++)
+            a[i].setData(i*100);
+        a[0].setCur(3);
+        for(int j = 1;a[j].getData()!=0;j=a[j].getCur())
+            System.out.println(a[j].getData());
 
     }
 }
