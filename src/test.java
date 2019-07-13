@@ -5,11 +5,12 @@ public class test
     {
         StaticLinkedList[] a = new StaticLinkedList[StaticLinkedList.MAXSIZE];
         StaticLinkedList.makeList(a);
-        for(int i = 1;i<3;i++)
-            a[i].setData(i*100);
-        a[0].setCur(3);
-        for(int j = 1;a[j].getData()!=0;j=a[j].getCur())
-            System.out.println(a[j].getData());
+        StaticLinkedList.insert(a,100,1);
+        StaticLinkedList.insert(a,200,2);
+        StaticLinkedList.insert(a,300,2);
+        StaticLinkedList.insert(a,400,4);
+        StaticLinkedList.delete(a,1);
+        StaticLinkedList.printList(a);
 
     }
 }
