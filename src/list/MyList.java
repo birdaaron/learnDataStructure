@@ -1,3 +1,5 @@
+package list;
+
 public class MyList
 {
     private Object[] data;

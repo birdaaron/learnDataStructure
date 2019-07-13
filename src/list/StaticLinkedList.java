@@ -1,3 +1,5 @@
+package list;
+
 public class StaticLinkedList
 {
     private int data=0;

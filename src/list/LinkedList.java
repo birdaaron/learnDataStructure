@@ -1,3 +1,5 @@
+package list;
+
 public class LinkedList
 {
     private int data;
